@@ -1,0 +1,109 @@
+﻿engine,audio_file,wer,cer,accuracy,similarity,processing_time
+Azure Speech Services,목도리.wav,1.0,0.3333333333333333,0.0,0.0,0.7233941555023193
+Azure Speech Services,장갑.wav,0.0,0.0,1.0,1.0,0.5120582580566406
+Azure Speech Services,사탕.wav,0.0,0.0,1.0,1.0,0.5079689025878906
+Azure Speech Services,라면.wav,0.0,0.0,1.0,1.0,0.6785969734191895
+Azure Speech Services,침대.wav,0.0,0.0,1.0,1.0,0.6838819980621338
+Azure Speech Services,양말.wav,0.0,0.0,1.0,1.0,0.5378530025482178
+Azure Speech Services,짹짹.wav,0.0,0.0,1.0,1.0,0.6318659782409668
+Azure Speech Services,싸우다.wav,0.0,0.0,1.0,1.0,0.6363449096679688
+Azure Speech Services,숟가락.wav,0.0,0.0,1.0,1.0,0.6753830909729004
+Azure Speech Services,단추.wav,0.0,0.0,1.0,1.0,0.5638689994812012
+Azure Speech Services,아프다.wav,0.0,0.0,1.0,1.0,0.6493639945983887
+Azure Speech Services,먹다.wav,0.0,0.0,1.0,1.0,0.5706241130828857
+Azure Speech Services,그네.wav,0.0,0.0,1.0,1.0,0.5173530578613281
+Azure Speech Services,비행기.wav,0.0,0.0,1.0,1.0,0.5817158222198486
+Azure Speech Services,휴지.wav,0.0,0.0,1.0,1.0,0.6540188789367676
+Azure Speech Services,눈사람.wav,0.0,0.0,1.0,1.0,0.656174898147583
+Azure Speech Services,나무.wav,0.0,0.0,1.0,1.0,0.5958690643310547
+Azure Speech Services,코.wav,1.0,1.0,0.0,0.0,0.7291500568389893
+Azure Speech Services,토끼.wav,1.0,0.5,0.0,0.0,0.6420238018035889
+Azure Speech Services,접시.wav,0.0,0.0,1.0,1.0,0.5876369476318359
+Azure Speech Services,딸기.wav,0.0,0.0,1.0,1.0,0.5411772727966309
+Azure Speech Services,가방.wav,0.0,0.0,1.0,1.0,0.7195882797241211
+Azure Speech Services,바지.wav,0.0,0.0,1.0,1.0,0.7692773342132568
+Azure Speech Services,꽃.wav,0.0,0.0,1.0,1.0,0.48657989501953125
+Azure Speech Services,우산.wav,1.0,0.5,0.0,0.0,0.5972690582275391
+Azure Speech Services,포크.wav,0.0,0.0,1.0,1.0,0.5453228950500488
+Azure Speech Services,뽀뽀.wav,0.0,0.0,1.0,1.0,0.4953322410583496
+Local Whisper (base),목도리.wav,1.0,1.0,0.0,0.0,0.7313590049743652
+Local Whisper (base),장갑.wav,1.0,0.5,0.0,0.0,0.36966991424560547
+Local Whisper (base),사탕.wav,1.0,0.5,0.0,0.0,0.34650111198425293
+Local Whisper (base),라면.wav,0.0,0.0,1.0,1.0,0.35317111015319824
+Local Whisper (base),침대.wav,0.0,0.0,1.0,1.0,0.37633728981018066
+Local Whisper (base),양말.wav,1.0,2.0,0.0,0.0,1.7479610443115234
+Local Whisper (base),짹짹.wav,2.0,2.0,-1.0,0.0,0.3373219966888428
+Local Whisper (base),싸우다.wav,0.0,0.0,1.0,1.0,0.3643960952758789
+Local Whisper (base),숟가락.wav,1.0,0.3333333333333333,0.0,0.0,0.35945796966552734
+Local Whisper (base),단추.wav,0.0,0.0,1.0,1.0,0.3657557964324951
+Local Whisper (base),아프다.wav,0.0,0.0,1.0,1.0,0.3733398914337158
+Local Whisper (base),먹다.wav,0.0,0.0,1.0,1.0,0.3542647361755371
+Local Whisper (base),그네.wav,2.0,7.5,-1.0,0.0,1.6905038356781006
+Local Whisper (base),비행기.wav,0.0,0.0,1.0,1.0,0.36443209648132324
+Local Whisper (base),휴지.wav,0.0,0.0,1.0,1.0,0.3739631175994873
+Local Whisper (base),눈사람.wav,0.0,0.0,1.0,1.0,0.36359691619873047
+Local Whisper (base),나무.wav,0.0,0.0,1.0,1.0,0.3758080005645752
+Local Whisper (base),코.wav,3.0,15.0,-2.0,0.0,1.648987054824829
+Local Whisper (base),토끼.wav,0.0,0.0,1.0,1.0,0.350236177444458
+Local Whisper (base),접시.wav,0.0,0.0,1.0,1.0,0.3261678218841553
+Local Whisper (base),딸기.wav,1.0,1.0,0.0,0.0,0.35942721366882324
+Local Whisper (base),가방.wav,0.0,0.0,1.0,1.0,0.3557450771331787
+Local Whisper (base),바지.wav,1.0,0.5,0.0,0.0,0.3573141098022461
+Local Whisper (base),꽃.wav,1.0,1.0,0.0,0.0,0.34625720977783203
+Local Whisper (base),우산.wav,1.0,0.5,0.0,0.0,0.36168622970581055
+Local Whisper (base),포크.wav,1.0,0.5,0.0,0.0,0.620445966720581
+Local Whisper (base),뽀뽀.wav,0.0,0.0,1.0,1.0,0.3813650608062744
+Wav2Vec2 (Korean),목도리.wav,1.0,0.6666666666666666,0.0,0.0,0.7049040794372559
+Wav2Vec2 (Korean),장갑.wav,1.0,0.5,0.0,0.0,0.15601587295532227
+Wav2Vec2 (Korean),사탕.wav,1.0,0.5,0.0,0.0,0.14436984062194824
+Wav2Vec2 (Korean),라면.wav,1.0,0.5,0.0,0.0,0.22039508819580078
+Wav2Vec2 (Korean),침대.wav,1.0,1.0,0.0,0.0,0.16806507110595703
+Wav2Vec2 (Korean),양말.wav,0.0,0.0,1.0,1.0,0.1771068572998047
+Wav2Vec2 (Korean),짹짹.wav,2.0,1.5,-1.0,0.0,0.1461632251739502
+Wav2Vec2 (Korean),싸우다.wav,1.0,0.6666666666666666,0.0,0.0,0.15631604194641113
+Wav2Vec2 (Korean),숟가락.wav,1.0,0.6666666666666666,0.0,0.0,0.18152999877929688
+Wav2Vec2 (Korean),단추.wav,1.0,0.5,0.0,0.0,0.14638209342956543
+Wav2Vec2 (Korean),아프다.wav,1.0,0.6666666666666666,0.0,0.0,0.17593598365783691
+Wav2Vec2 (Korean),먹다.wav,0.0,0.0,1.0,1.0,0.153306245803833
+Wav2Vec2 (Korean),그네.wav,2.0,1.0,-1.0,0.0,0.1453111171722412
+Wav2Vec2 (Korean),비행기.wav,0.0,0.0,1.0,1.0,0.16901922225952148
+Wav2Vec2 (Korean),휴지.wav,0.0,0.0,1.0,1.0,0.17362499237060547
+Wav2Vec2 (Korean),눈사람.wav,2.0,0.6666666666666666,-1.0,0.0,0.16938209533691406
+Wav2Vec2 (Korean),나무.wav,1.0,0.5,0.0,0.0,0.144118070602417
+Wav2Vec2 (Korean),코.wav,1.0,1.0,0.0,0.0,0.1510028839111328
+Wav2Vec2 (Korean),토끼.wav,1.0,1.0,0.0,0.0,0.17251992225646973
+Wav2Vec2 (Korean),접시.wav,0.0,0.0,1.0,1.0,0.14684319496154785
+Wav2Vec2 (Korean),딸기.wav,2.0,1.5,-1.0,0.0,0.14769387245178223
+Wav2Vec2 (Korean),가방.wav,1.0,0.5,0.0,0.0,0.17200493812561035
+Wav2Vec2 (Korean),바지.wav,1.0,1.0,0.0,0.0,0.1697530746459961
+Wav2Vec2 (Korean),꽃.wav,1.0,1.0,0.0,0.0,0.14232277870178223
+Wav2Vec2 (Korean),우산.wav,0.0,0.0,1.0,1.0,0.14495587348937988
+Wav2Vec2 (Korean),포크.wav,1.0,1.0,0.0,0.0,0.14905023574829102
+Wav2Vec2 (Korean),뽀뽀.wav,1.0,1.0,0.0,0.0,0.15448236465454102
+OpenAI Whisper API,목도리.wav,1.0,1.0,0.0,0.0,0.29854607582092285
+OpenAI Whisper API,장갑.wav,1.0,1.0,0.0,0.0,0.24420928955078125
+OpenAI Whisper API,사탕.wav,1.0,1.0,0.0,0.0,0.19777917861938477
+OpenAI Whisper API,라면.wav,1.0,1.0,0.0,0.0,0.20789408683776855
+OpenAI Whisper API,침대.wav,1.0,1.0,0.0,0.0,0.22612786293029785
+OpenAI Whisper API,양말.wav,1.0,1.0,0.0,0.0,0.21727824211120605
+OpenAI Whisper API,짹짹.wav,1.0,1.0,0.0,0.0,0.18729519844055176
+OpenAI Whisper API,싸우다.wav,1.0,1.0,0.0,0.0,0.20088505744934082
+OpenAI Whisper API,숟가락.wav,1.0,1.0,0.0,0.0,0.18105506896972656
+OpenAI Whisper API,단추.wav,1.0,1.0,0.0,0.0,0.19122695922851562
+OpenAI Whisper API,아프다.wav,1.0,1.0,0.0,0.0,0.21103596687316895
+OpenAI Whisper API,먹다.wav,1.0,1.0,0.0,0.0,0.2091209888458252
+OpenAI Whisper API,그네.wav,1.0,1.0,0.0,0.0,0.20442485809326172
+OpenAI Whisper API,비행기.wav,1.0,1.0,0.0,0.0,0.2064204216003418
+OpenAI Whisper API,휴지.wav,1.0,1.0,0.0,0.0,0.18438410758972168
+OpenAI Whisper API,눈사람.wav,1.0,1.0,0.0,0.0,0.20936298370361328
+OpenAI Whisper API,나무.wav,1.0,1.0,0.0,0.0,0.17639517784118652
+OpenAI Whisper API,코.wav,1.0,1.0,0.0,0.0,0.20421624183654785
+OpenAI Whisper API,토끼.wav,1.0,1.0,0.0,0.0,0.17563390731811523
+OpenAI Whisper API,접시.wav,1.0,1.0,0.0,0.0,0.2571561336517334
+OpenAI Whisper API,딸기.wav,1.0,1.0,0.0,0.0,0.24740028381347656
+OpenAI Whisper API,가방.wav,1.0,1.0,0.0,0.0,0.21761393547058105
+OpenAI Whisper API,바지.wav,1.0,1.0,0.0,0.0,0.18231987953186035
+OpenAI Whisper API,꽃.wav,1.0,1.0,0.0,0.0,0.1979351043701172
+OpenAI Whisper API,우산.wav,1.0,1.0,0.0,0.0,0.2063150405883789
+OpenAI Whisper API,포크.wav,1.0,1.0,0.0,0.0,0.1835639476776123
+OpenAI Whisper API,뽀뽀.wav,1.0,1.0,0.0,0.0,0.21104001998901367

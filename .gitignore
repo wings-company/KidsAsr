@@ -1,0 +1,10 @@
+.env
+.DS_Store
+.idea
+.vscode
+.pytest_cache
+.venv
+
+sample_data/
+
+*.log

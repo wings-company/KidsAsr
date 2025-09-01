@@ -1,0 +1,1262 @@
+{
+  "detailed_results": {
+    "Azure Speech Services": [
+      {
+        "audio_file": "목도리.wav",
+        "reference_text": "목도리",
+        "hypothesis_text": "b도리",
+        "accuracy": 0.0,
+        "similarity": 0.0,
+        "processing_time": 0.0013132095336914062,
+        "has_audio": true
+      },
+      {
+        "audio_file": "장갑.wav",
+        "reference_text": "장갑",
+        "hypothesis_text": "장z",
+        "accuracy": 0.0,
+        "similarity": 0.0,
+        "processing_time": 1.0251998901367188e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "사탕.wav",
+        "reference_text": "사탕",
+        "hypothesis_text": "사탕",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.344650268554688e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "라면.wav",
+        "reference_text": "라면",
+        "hypothesis_text": "라면",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "침대.wav",
+        "reference_text": "침대",
+        "hypothesis_text": "침대",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "양말.wav",
+        "reference_text": "양말",
+        "hypothesis_text": "양말",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "짹짹.wav",
+        "reference_text": "짹짹",
+        "hypothesis_text": "짹짹",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "싸우다.wav",
+        "reference_text": "싸우다",
+        "hypothesis_text": "싸우다",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "숟가락.wav",
+        "reference_text": "숟가락",
+        "hypothesis_text": "숟가락",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "단추.wav",
+        "reference_text": "단추",
+        "hypothesis_text": "단추",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "아프다.wav",
+        "reference_text": "아프다",
+        "hypothesis_text": "아프다",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "먹다.wav",
+        "reference_text": "먹다",
+        "hypothesis_text": "먹다",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "그네.wav",
+        "reference_text": "그네",
+        "hypothesis_text": "그x",
+        "accuracy": 0.0,
+        "similarity": 0.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "비행기.wav",
+        "reference_text": "비행기",
+        "hypothesis_text": "비행기",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "휴지.wav",
+        "reference_text": "휴지",
+        "hypothesis_text": "휴지",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "눈사람.wav",
+        "reference_text": "눈사람",
+        "hypothesis_text": "눈사람",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.344650268554688e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "나무.wav",
+        "reference_text": "나무",
+        "hypothesis_text": "나무",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "코.wav",
+        "reference_text": "코",
+        "hypothesis_text": "코",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "토끼.wav",
+        "reference_text": "토끼",
+        "hypothesis_text": "토끼",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.344650268554688e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "접시.wav",
+        "reference_text": "접시",
+        "hypothesis_text": "접시",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "딸기.wav",
+        "reference_text": "딸기",
+        "hypothesis_text": "딸기",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "가방.wav",
+        "reference_text": "가방",
+        "hypothesis_text": "가방",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.198883056640625e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "바지.wav",
+        "reference_text": "바지",
+        "hypothesis_text": "바지",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 3.886222839355469e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "꽃.wav",
+        "reference_text": "꽃",
+        "hypothesis_text": "꽃",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 3.0040740966796875e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "우산.wav",
+        "reference_text": "우산",
+        "hypothesis_text": "우산",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 1.5020370483398438e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "포크.wav",
+        "reference_text": "포크",
+        "hypothesis_text": "포크",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 2.288818359375e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "뽀뽀.wav",
+        "reference_text": "뽀뽀",
+        "hypothesis_text": "뽀뽀",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 1.0013580322265625e-05,
+        "has_audio": true
+      }
+    ],
+    "Local Whisper": [
+      {
+        "audio_file": "목도리.wav",
+        "reference_text": "목도리",
+        "hypothesis_text": "목도리",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.152557373046875e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "장갑.wav",
+        "reference_text": "장갑",
+        "hypothesis_text": "장갑",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 5.9604644775390625e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "사탕.wav",
+        "reference_text": "사탕",
+        "hypothesis_text": "사탕",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "라면.wav",
+        "reference_text": "라면",
+        "hypothesis_text": "라z",
+        "accuracy": 0.0,
+        "similarity": 0.0,
+        "processing_time": 9.298324584960938e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "침대.wav",
+        "reference_text": "침대",
+        "hypothesis_text": "침대",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "양말.wav",
+        "reference_text": "양말",
+        "hypothesis_text": "양말",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "짹짹.wav",
+        "reference_text": "짹짹",
+        "hypothesis_text": "짹y",
+        "accuracy": 0.0,
+        "similarity": 0.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "싸우다.wav",
+        "reference_text": "싸우다",
+        "hypothesis_text": "싸우z",
+        "accuracy": 0.0,
+        "similarity": 0.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "숟가락.wav",
+        "reference_text": "숟가락",
+        "hypothesis_text": "숟가락",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "단추.wav",
+        "reference_text": "단추",
+        "hypothesis_text": "단추",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "아프다.wav",
+        "reference_text": "아프다",
+        "hypothesis_text": "b프다",
+        "accuracy": 0.0,
+        "similarity": 0.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "먹다.wav",
+        "reference_text": "먹다",
+        "hypothesis_text": "먹다",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "그네.wav",
+        "reference_text": "그네",
+        "hypothesis_text": "b네",
+        "accuracy": 0.0,
+        "similarity": 0.0,
+        "processing_time": 9.059906005859375e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "비행기.wav",
+        "reference_text": "비행기",
+        "hypothesis_text": "비행기",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.198883056640625e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "휴지.wav",
+        "reference_text": "휴지",
+        "hypothesis_text": "휴지",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "눈사람.wav",
+        "reference_text": "눈사람",
+        "hypothesis_text": "눈사람",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "나무.wav",
+        "reference_text": "나무",
+        "hypothesis_text": "나b",
+        "accuracy": 0.0,
+        "similarity": 0.0,
+        "processing_time": 9.059906005859375e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "코.wav",
+        "reference_text": "코",
+        "hypothesis_text": "코",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "토끼.wav",
+        "reference_text": "토끼",
+        "hypothesis_text": "토z",
+        "accuracy": 0.0,
+        "similarity": 0.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "접시.wav",
+        "reference_text": "접시",
+        "hypothesis_text": "접시",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "딸기.wav",
+        "reference_text": "딸기",
+        "hypothesis_text": "딸기",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 1.1920928955078125e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "가방.wav",
+        "reference_text": "가방",
+        "hypothesis_text": "가방",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 5.9604644775390625e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "바지.wav",
+        "reference_text": "바지",
+        "hypothesis_text": "바지",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 3.504753112792969e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "꽃.wav",
+        "reference_text": "꽃",
+        "hypothesis_text": "꽃",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 1.71661376953125e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "우산.wav",
+        "reference_text": "우산",
+        "hypothesis_text": "우산",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 1.1682510375976562e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "포크.wav",
+        "reference_text": "포크",
+        "hypothesis_text": "포크",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 1.0013580322265625e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "뽀뽀.wav",
+        "reference_text": "뽀뽀",
+        "hypothesis_text": "뽀y",
+        "accuracy": 0.0,
+        "similarity": 0.0,
+        "processing_time": 1.4066696166992188e-05,
+        "has_audio": true
+      }
+    ],
+    "Wav2Vec2 Korean": [
+      {
+        "audio_file": "목도리.wav",
+        "reference_text": "목도리",
+        "hypothesis_text": "목도리",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.344650268554688e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "장갑.wav",
+        "reference_text": "장갑",
+        "hypothesis_text": "장갑",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.152557373046875e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "사탕.wav",
+        "reference_text": "사탕",
+        "hypothesis_text": "사탕",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "라면.wav",
+        "reference_text": "라면",
+        "hypothesis_text": "라면",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "침대.wav",
+        "reference_text": "침대",
+        "hypothesis_text": "침대",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.152557373046875e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "양말.wav",
+        "reference_text": "양말",
+        "hypothesis_text": "양말",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "짹짹.wav",
+        "reference_text": "짹짹",
+        "hypothesis_text": "짹z",
+        "accuracy": 0.0,
+        "similarity": 0.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "싸우다.wav",
+        "reference_text": "싸우다",
+        "hypothesis_text": "싸우다",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "숟가락.wav",
+        "reference_text": "숟가락",
+        "hypothesis_text": "숟가락",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "단추.wav",
+        "reference_text": "단추",
+        "hypothesis_text": "단추",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 5.9604644775390625e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "아프다.wav",
+        "reference_text": "아프다",
+        "hypothesis_text": "아프다",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "먹다.wav",
+        "reference_text": "먹다",
+        "hypothesis_text": "먹다",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "그네.wav",
+        "reference_text": "그네",
+        "hypothesis_text": "그네",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "비행기.wav",
+        "reference_text": "비행기",
+        "hypothesis_text": "비행기",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.67572021484375e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "휴지.wav",
+        "reference_text": "휴지",
+        "hypothesis_text": "휴지",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "눈사람.wav",
+        "reference_text": "눈사람",
+        "hypothesis_text": "눈사람",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "나무.wav",
+        "reference_text": "나무",
+        "hypothesis_text": "나무",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "코.wav",
+        "reference_text": "코",
+        "hypothesis_text": "코",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "토끼.wav",
+        "reference_text": "토끼",
+        "hypothesis_text": "토끼",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "접시.wav",
+        "reference_text": "접시",
+        "hypothesis_text": "접시",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "딸기.wav",
+        "reference_text": "딸기",
+        "hypothesis_text": "딸기",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "가방.wav",
+        "reference_text": "가방",
+        "hypothesis_text": "가a",
+        "accuracy": 0.0,
+        "similarity": 0.0,
+        "processing_time": 9.059906005859375e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "바지.wav",
+        "reference_text": "바지",
+        "hypothesis_text": "바지",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 1.7881393432617188e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "꽃.wav",
+        "reference_text": "꽃",
+        "hypothesis_text": "꽃",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 3.695487976074219e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "우산.wav",
+        "reference_text": "우산",
+        "hypothesis_text": "우산",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 2.09808349609375e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "포크.wav",
+        "reference_text": "포크",
+        "hypothesis_text": "포크",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.821487426757812e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "뽀뽀.wav",
+        "reference_text": "뽀뽀",
+        "hypothesis_text": "뽀y",
+        "accuracy": 0.0,
+        "similarity": 0.0,
+        "processing_time": 1.0013580322265625e-05,
+        "has_audio": true
+      }
+    ],
+    "OpenAI Whisper API": [
+      {
+        "audio_file": "목도리.wav",
+        "reference_text": "목도리",
+        "hypothesis_text": "목도리",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "장갑.wav",
+        "reference_text": "장갑",
+        "hypothesis_text": "장b",
+        "accuracy": 0.0,
+        "similarity": 0.0,
+        "processing_time": 1.0013580322265625e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "사탕.wav",
+        "reference_text": "사탕",
+        "hypothesis_text": "사탕",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "라면.wav",
+        "reference_text": "라면",
+        "hypothesis_text": "라면",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.152557373046875e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "침대.wav",
+        "reference_text": "침대",
+        "hypothesis_text": "침대",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "양말.wav",
+        "reference_text": "양말",
+        "hypothesis_text": "양말",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "짹짹.wav",
+        "reference_text": "짹짹",
+        "hypothesis_text": "짹짹",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "싸우다.wav",
+        "reference_text": "싸우다",
+        "hypothesis_text": "싸우다",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 5.9604644775390625e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "숟가락.wav",
+        "reference_text": "숟가락",
+        "hypothesis_text": "숟가락",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "단추.wav",
+        "reference_text": "단추",
+        "hypothesis_text": "단추",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.344650268554688e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "아프다.wav",
+        "reference_text": "아프다",
+        "hypothesis_text": "아프다",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "먹다.wav",
+        "reference_text": "먹다",
+        "hypothesis_text": "먹b",
+        "accuracy": 0.0,
+        "similarity": 0.0,
+        "processing_time": 1.0013580322265625e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "그네.wav",
+        "reference_text": "그네",
+        "hypothesis_text": "그네",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "비행기.wav",
+        "reference_text": "비행기",
+        "hypothesis_text": "비행기",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "휴지.wav",
+        "reference_text": "휴지",
+        "hypothesis_text": "휴지",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "눈사람.wav",
+        "reference_text": "눈사람",
+        "hypothesis_text": "눈사람",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 5.7220458984375e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "나무.wav",
+        "reference_text": "나무",
+        "hypothesis_text": "나무",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 1.2874603271484375e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "코.wav",
+        "reference_text": "코",
+        "hypothesis_text": "코",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "토끼.wav",
+        "reference_text": "토끼",
+        "hypothesis_text": "토끼",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "접시.wav",
+        "reference_text": "접시",
+        "hypothesis_text": "접z",
+        "accuracy": 0.0,
+        "similarity": 0.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "딸기.wav",
+        "reference_text": "딸기",
+        "hypothesis_text": "딸기",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "가방.wav",
+        "reference_text": "가방",
+        "hypothesis_text": "가방",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 5.9604644775390625e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "바지.wav",
+        "reference_text": "바지",
+        "hypothesis_text": "바지",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 1.1205673217773438e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "꽃.wav",
+        "reference_text": "꽃",
+        "hypothesis_text": "꽃",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 2.5033950805664062e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "우산.wav",
+        "reference_text": "우산",
+        "hypothesis_text": "우산",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 2.09808349609375e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "포크.wav",
+        "reference_text": "포크",
+        "hypothesis_text": "포크",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 9.298324584960938e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "뽀뽀.wav",
+        "reference_text": "뽀뽀",
+        "hypothesis_text": "뽀뽀",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 9.059906005859375e-06,
+        "has_audio": true
+      }
+    ],
+    "Google Cloud Speech": [
+      {
+        "audio_file": "목도리.wav",
+        "reference_text": "목도리",
+        "hypothesis_text": "목도리",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "장갑.wav",
+        "reference_text": "장갑",
+        "hypothesis_text": "장갑",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "사탕.wav",
+        "reference_text": "사탕",
+        "hypothesis_text": "사탕",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "라면.wav",
+        "reference_text": "라면",
+        "hypothesis_text": "라면",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "침대.wav",
+        "reference_text": "침대",
+        "hypothesis_text": "침대",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "양말.wav",
+        "reference_text": "양말",
+        "hypothesis_text": "양z",
+        "accuracy": 0.0,
+        "similarity": 0.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "짹짹.wav",
+        "reference_text": "짹짹",
+        "hypothesis_text": "짹짹",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "싸우다.wav",
+        "reference_text": "싸우다",
+        "hypothesis_text": "싸우다",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "숟가락.wav",
+        "reference_text": "숟가락",
+        "hypothesis_text": "숟가락",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "단추.wav",
+        "reference_text": "단추",
+        "hypothesis_text": "단추",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "아프다.wav",
+        "reference_text": "아프다",
+        "hypothesis_text": "아프다",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.106231689453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "먹다.wav",
+        "reference_text": "먹다",
+        "hypothesis_text": "먹다",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.152557373046875e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "그네.wav",
+        "reference_text": "그네",
+        "hypothesis_text": "그네",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 5.9604644775390625e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "비행기.wav",
+        "reference_text": "비행기",
+        "hypothesis_text": "비행y",
+        "accuracy": 0.0,
+        "similarity": 0.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "휴지.wav",
+        "reference_text": "휴지",
+        "hypothesis_text": "휴지",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "눈사람.wav",
+        "reference_text": "눈사람",
+        "hypothesis_text": "눈사y",
+        "accuracy": 0.0,
+        "similarity": 0.0,
+        "processing_time": 8.821487426757812e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "나무.wav",
+        "reference_text": "나무",
+        "hypothesis_text": "나무",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.867813110351562e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "코.wav",
+        "reference_text": "코",
+        "hypothesis_text": "코",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "토끼.wav",
+        "reference_text": "토끼",
+        "hypothesis_text": "토끼",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 8.344650268554688e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "접시.wav",
+        "reference_text": "접시",
+        "hypothesis_text": "접시",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 5.9604644775390625e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "딸기.wav",
+        "reference_text": "딸기",
+        "hypothesis_text": "딸기",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 7.152557373046875e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "가방.wav",
+        "reference_text": "가방",
+        "hypothesis_text": "가방",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 6.9141387939453125e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "바지.wav",
+        "reference_text": "바지",
+        "hypothesis_text": "바지",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 1.0967254638671875e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "꽃.wav",
+        "reference_text": "꽃",
+        "hypothesis_text": "꽃",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 1.2874603271484375e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "우산.wav",
+        "reference_text": "우산",
+        "hypothesis_text": "우산",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 1.4066696166992188e-05,
+        "has_audio": true
+      },
+      {
+        "audio_file": "포크.wav",
+        "reference_text": "포크",
+        "hypothesis_text": "포크",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 9.059906005859375e-06,
+        "has_audio": true
+      },
+      {
+        "audio_file": "뽀뽀.wav",
+        "reference_text": "뽀뽀",
+        "hypothesis_text": "뽀뽀",
+        "accuracy": 1.0,
+        "similarity": 1.0,
+        "processing_time": 9.775161743164062e-06,
+        "has_audio": true
+      }
+    ]
+  },
+  "engine_summary": {
+    "Azure Speech Services": {
+      "avg_accuracy": 0.8888888888888888,
+      "avg_similarity": 0.8888888888888888,
+      "avg_time": 5.8915879991319445e-05,
+      "total_tests": 27
+    },
+    "Local Whisper": {
+      "avg_accuracy": 0.7037037037037037,
+      "avg_similarity": 0.7037037037037037,
+      "avg_time": 9.616216023763021e-06,
+      "total_tests": 27
+    },
+    "Wav2Vec2 Korean": {
+      "avg_accuracy": 0.8888888888888888,
+      "avg_similarity": 0.8888888888888888,
+      "avg_time": 9.845804285120081e-06,
+      "total_tests": 27
+    },
+    "OpenAI Whisper API": {
+      "avg_accuracy": 0.8888888888888888,
+      "avg_similarity": 0.8888888888888888,
+      "avg_time": 9.148209183304399e-06,
+      "total_tests": 27
+    },
+    "Google Cloud Speech": {
+      "avg_accuracy": 0.8888888888888888,
+      "avg_similarity": 0.8888888888888888,
+      "avg_time": 8.141552960431134e-06,
+      "total_tests": 27
+    }
+  },
+  "timestamp": "2025-09-01 14:06:58"
+}

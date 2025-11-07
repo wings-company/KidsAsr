@@ -4,10 +4,10 @@ import os
 try:
     from dotenv import load_dotenv
     load_dotenv()
-    print("✅ .env 파일을 성공적으로 로드했습니다.")
+    print(".env 파일을 성공적으로 로드했습니다.")
 except ImportError:
-    print("⚠️ python-dotenv가 설치되지 않았습니다. pip install python-dotenv로 설치하세요.")
-    print("💡 또는 환경변수를 직접 설정하세요.")
+    print("python-dotenv가 설치되지 않았습니다. pip install python-dotenv로 설치하세요.")
+    print("또는 환경변수를 직접 설정하세요.")
 
 class Config:
     # Azure Speech Services

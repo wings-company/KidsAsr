@@ -8,3 +8,7 @@
 sample_data/
 
 *.log
+
+modules/
+
+*.wav

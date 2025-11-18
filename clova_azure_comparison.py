@@ -43,13 +43,6 @@ class ClovaSpeechEngine:
             self.secret_key = self.config.CLOVA_SECRET_KEY
             self.auth_type = 'secret_key'
             logger.info("Clova Speech API 초기화 완료 (invoke URL + secret key 방식)")
-        # 기존 방식 (client ID + secret)도 지원
-        elif self.config.CLOVA_CLIENT_ID and self.config.CLOVA_CLIENT_SECRET:
-            self.client_id = self.config.CLOVA_CLIENT_ID
-            self.client_secret = self.config.CLOVA_CLIENT_SECRET
-            self.url = 'https://naveropenapi.apigw.ntruss.com/recog/v1/stt'
-            self.auth_type = 'client_id'
-            logger.info("Clova Speech API 초기화 완료 (client ID + secret 방식)")
         else:
             raise ValueError("Clova Speech API 키가 설정되지 않았습니다. CLOVA_INVOKE_URL과 CLOVA_SECRET_KEY 또는 CLOVA_CLIENT_ID와 CLOVA_CLIENT_SECRET을 설정하세요.")
     

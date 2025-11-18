@@ -4,15 +4,19 @@ import os
 try:
     from dotenv import load_dotenv
     load_dotenv()
-    print("✅ .env 파일을 성공적으로 로드했습니다.")
+    print(".env 파일을 성공적으로 로드했습니다.")
 except ImportError:
-    print("⚠️ python-dotenv가 설치되지 않았습니다. pip install python-dotenv로 설치하세요.")
-    print("💡 또는 환경변수를 직접 설정하세요.")
+    print("python-dotenv가 설치되지 않았습니다. pip install python-dotenv로 설치하세요.")
+    print("또는 환경변수를 직접 설정하세요.")
 
 class Config:
     # Azure Speech Services
     AZURE_SPEECH_KEY = os.getenv('AZURE_SPEECH_KEY', '')
     AZURE_SPEECH_REGION = os.getenv('AZURE_SPEECH_REGION', 'eastus')
+    
+    # Clova Speech API
+    CLOVA_INVOKE_URL = os.getenv('CLOVA_INVOKE_URL', '')
+    CLOVA_SECRET_KEY = os.getenv('CLOVA_SECRET_KEY', '')
     
     # OpenAI Whisper API
     OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', '')

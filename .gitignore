@@ -7,4 +7,14 @@
 
 sample_data/
 
+engine/modules/*
+!engine/modules/import.py
+
 *.log
+
+*.wav
+*.txt
+*.png
+*.csv
+*.json
+*.xlsx

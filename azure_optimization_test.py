@@ -120,8 +120,75 @@ class AzureOptimizationTester:
                     self.config_name = config_name
                     self.name = f"Azure ({config_name})"
                 
-                def transcribe(self, audio_path: str, preprocess: bool = True) -> str:
-                    """음성 인식 실행 - 연속 인식 사용"""
+                def transcribe(self, audio_path: str, preprocess: bool = True, max_retries: int = 3, use_voting: bool = True) -> str:
+                    """음성 인식 실행 - 다중 투표 방식 포함"""
+                    if use_voting:
+                        # 혁신적 방법 1: 다중 투표 방식 (여러 번 인식해서 가장 많이 나온 결과 선택)
+                        return self._transcribe_with_voting(audio_path, preprocess, num_votes=5)
+                    else:
+                        # 기존 재시도 로직
+                        for attempt in range(max_retries):
+                            try:
+                                result = self._transcribe_once(audio_path, preprocess, attempt + 1)
+                                if result:  # 성공하면 즉시 반환
+                                    return result
+                            except Exception as e:
+                                logger.warning(f"인식 시도 {attempt + 1}/{max_retries} 실패: {e}")
+                                if attempt < max_retries - 1:
+                                    import time
+                                    time.sleep(0.5)  # 재시도 전 잠시 대기
+                        
+                        # 모든 재시도 실패
+                        logger.warning(f"모든 재시도 실패: {os.path.basename(audio_path)}")
+                        return ""
+                
+                def _transcribe_with_voting(self, audio_path: str, preprocess: bool = True, num_votes: int = 5) -> str:
+                    """다중 투표 방식: 여러 번 인식해서 가장 많이 나온 결과 선택"""
+                    from collections import Counter
+                    import time
+                    
+                    results = []
+                    logger.info(f"다중 투표 방식 시작: {os.path.basename(audio_path)} ({num_votes}회 인식)")
+                    
+                    # 여러 번 인식
+                    for vote_num in range(num_votes):
+                        try:
+                            result = self._transcribe_once(audio_path, preprocess, vote_num + 1)
+                            if result and result.strip():  # 빈 문자열 제외
+                                results.append(result.strip())
+                                logger.debug(f"투표 {vote_num + 1}/{num_votes}: \"{result.strip()}\"")
+                            time.sleep(0.2)  # 각 인식 사이 짧은 대기
+                        except Exception as e:
+                            logger.debug(f"투표 {vote_num + 1}/{num_votes} 실패: {e}")
+                    
+                    if not results:
+                        logger.warning(f"다중 투표 실패: 모든 인식 결과가 비어있음")
+                        return ""
+                    
+                    # 가장 많이 나온 결과 선택
+                    result_counter = Counter(results)
+                    most_common = result_counter.most_common(1)[0]
+                    final_result = most_common[0]
+                    count = most_common[1]
+                    
+                    logger.info(f"다중 투표 결과: \"{final_result}\" ({count}/{len(results)}회 일치, 총 {len(results)}개 결과)")
+                    
+                    # 과반수 이상이면 신뢰도 높음
+                    if count >= len(results) // 2 + 1:
+                        logger.info(f"높은 신뢰도: {count}/{len(results)}회 일치")
+                    else:
+                        # 낮은 신뢰도인 경우, 가장 긴 결과를 선택 (더 많은 정보 포함)
+                        if len(result_counter) > 1:
+                            longest_result = max(result_counter.keys(), key=len)
+                            if len(longest_result) > len(final_result):
+                                logger.info(f"낮은 신뢰도로 가장 긴 결과 선택: \"{longest_result}\" (기존: \"{final_result}\")")
+                                final_result = longest_result
+                        logger.warning(f"낮은 신뢰도: {count}/{len(results)}회 일치, 다른 결과들: {dict(result_counter)}")
+                    
+                    return final_result
+                
+                def _transcribe_once(self, audio_path: str, preprocess: bool = True, attempt: int = 1) -> str:
+                    """음성 인식 실행 - 단일 시도"""
                     try:
                         if not audio_path.lower().endswith('.wav'):
                             logger.warning("Azure는 WAV 파일만 지원합니다.")
@@ -134,20 +201,72 @@ class AzureOptimizationTester:
                                 import librosa
                                 import soundfile as sf
                                 import tempfile
+                                import numpy as np
                                 
-                                # 오디오 로드 및 정규화
-                                audio, sr = librosa.load(audio_path, sr=16000, mono=True)
+                                # 오디오 로드 (원본 샘플레이트 유지)
+                                audio, sr = librosa.load(audio_path, sr=None, mono=True)
+                                
+                                # 오디오 정보 로깅
+                                duration = len(audio) / sr
+                                max_amplitude = np.max(np.abs(audio))
+                                logger.info(f"오디오 정보: {os.path.basename(audio_path)} - "
+                                          f"길이: {duration:.2f}초, 샘플레이트: {sr}Hz, "
+                                          f"최대볼륨: {max_amplitude:.4f}")
+                                
+                                # 오디오가 너무 조용하면 증폭
+                                if max_amplitude < 0.1:
+                                    gain = 0.5 / max_amplitude  # 최대 0.5까지 증폭
+                                    audio = audio * min(gain, 10.0)  # 최대 10배까지만
+                                    logger.info(f"오디오 볼륨 증폭: {min(gain, 10.0):.2f}배")
                                 
                                 # 볼륨 정규화 (아동 음성이 작을 수 있음)
                                 audio = librosa.util.normalize(audio)
                                 
-                                # 임시 파일로 저장
-                                temp_file = tempfile.NamedTemporaryFile(delete=False, suffix='.wav')
-                                sf.write(temp_file.name, audio, sr)
-                                final_audio_path = temp_file.name
-                                temp_file.close()
+                                # 샘플레이트를 16kHz로 변환 (Azure 권장)
+                                if sr != 16000:
+                                    audio = librosa.resample(audio, orig_sr=sr, target_sr=16000)
+                                    sr = 16000
+                                    logger.info(f"샘플레이트 변환: {sr}Hz")
                                 
-                                logger.debug(f"오디오 전처리 완료: {os.path.basename(audio_path)}")
+                                # 무음 구간 제거 (앞뒤)
+                                # RMS 에너지 기반으로 무음 구간 찾기
+                                frame_length = 2048
+                                hop_length = 512
+                                rms = librosa.feature.rms(y=audio, frame_length=frame_length, hop_length=hop_length)[0]
+                                rms_threshold = np.percentile(rms, 10)  # 하위 10%를 무음으로 간주
+                                
+                                # 앞뒤 무음 제거
+                                frames_above_threshold = np.where(rms > rms_threshold)[0]
+                                if len(frames_above_threshold) > 0:
+                                    start_frame = max(0, frames_above_threshold[0] - 5)  # 여유 5프레임
+                                    end_frame = min(len(rms), frames_above_threshold[-1] + 5)
+                                    start_sample = start_frame * hop_length
+                                    end_sample = end_frame * hop_length
+                                    audio = audio[start_sample:end_sample]
+                                    logger.info(f"무음 제거: {start_sample/sr:.2f}초 ~ {end_sample/sr:.2f}초")
+                                
+                                # 혁신적 방법 2: 짧은 오디오를 반복해서 길게 만들기 (Azure는 긴 오디오에서 더 잘 작동)
+                                audio_duration = len(audio) / sr
+                                if audio_duration < 2.0:  # 2초 미만이면 반복
+                                    repeat_count = max(2, int(2.0 / audio_duration))  # 최소 2초가 되도록 반복
+                                    repeat_count = min(repeat_count, 5)  # 최대 5회까지만 반복 (너무 길어지지 않도록)
+                                    audio_repeated = np.tile(audio, repeat_count)
+                                    audio = audio_repeated
+                                    logger.info(f"오디오 반복: {audio_duration:.2f}초 → {len(audio)/sr:.2f}초 ({repeat_count}회 반복)")
+                                
+                                # 최소 길이 확인 (너무 짧으면 원본 사용)
+                                if len(audio) / sr < 0.1:  # 0.1초 미만이면 너무 짧음
+                                    logger.warning(f"오디오가 너무 짧음 ({len(audio)/sr:.2f}초), 원본 사용")
+                                    final_audio_path = audio_path
+                                else:
+                                    # 임시 파일로 저장
+                                    temp_file = tempfile.NamedTemporaryFile(delete=False, suffix='.wav')
+                                    sf.write(temp_file.name, audio, sr, subtype='PCM_16')
+                                    final_audio_path = temp_file.name
+                                    temp_file.close()
+                                    
+                                    logger.info(f"오디오 전처리 완료: {os.path.basename(audio_path)} "
+                                              f"→ {len(audio)/sr:.2f}초")
                             except Exception as e:
                                 logger.warning(f"오디오 전처리 실패, 원본 사용: {e}")
                                 final_audio_path = audio_path
@@ -158,74 +277,125 @@ class AzureOptimizationTester:
                             audio_config=audio_config
                         )
                         
-                        logger.info(f"Azure 음성인식 시작 ({self.config_name}) - 파일: {os.path.basename(audio_path)}")
+                        logger.info(f"Azure 음성인식 시작 ({self.config_name}) - 파일: {os.path.basename(audio_path)} (시도 {attempt})")
                         
-                        # 연속 인식 사용 (더 긴 오디오와 아동 음성에 적합)
-                        all_results = []
-                        done = False
+                        # 먼저 recognize_once()로 시도 (더 안정적)
+                        result = speech_recognizer.recognize_once()
                         
-                        def recognized_cb(evt):
-                            """인식 성공 이벤트"""
-                            if evt.result.text:
-                                all_results.append(evt.result.text.strip())
+                        # recognize_once() 결과 처리
+                        recognized_text = ""
+                        should_try_continuous = False
                         
-                        def canceled_cb(evt):
-                            """취소 이벤트"""
-                            nonlocal done
-                            logger.warning(f"Azure 인식 취소됨 ({self.config_name}): {evt.reason}")
-                            done = True
-                        
-                        def stop_cb(evt):
-                            """중지 이벤트"""
-                            nonlocal done
-                            done = True
-                        
-                        # 이벤트 핸들러 등록
-                        speech_recognizer.recognized.connect(recognized_cb)
-                        speech_recognizer.canceled.connect(canceled_cb)
-                        speech_recognizer.session_stopped.connect(stop_cb)
-                        speech_recognizer.session_started.connect(lambda evt: logger.debug(f"세션 시작: {evt}"))
-                        
-                        # 연속 인식 시작
-                        speech_recognizer.start_continuous_recognition()
-                        
-                        # 최대 10초 대기 (오디오 길이에 따라 조정)
-                        import time
-                        timeout = 10.0
-                        start_time = time.time()
-                        while not done and (time.time() - start_time) < timeout:
-                            time.sleep(0.1)
-                        
-                        # 인식 중지
-                        speech_recognizer.stop_continuous_recognition()
-                        
-                        # 임시 파일 정리
-                        if final_audio_path != audio_path and os.path.exists(final_audio_path):
-                            try:
-                                os.unlink(final_audio_path)
-                            except:
-                                pass
-                        
-                        # 결과 처리
-                        if all_results:
-                            recognized_text = ' '.join(all_results).strip().replace('.', '')
-                            logger.info(f"Azure 인식 성공 ({self.config_name}): \"{recognized_text}\"")
-                            return recognized_text
-                        else:
-                            # 연속 인식 실패 시 recognize_once() 재시도
-                            logger.debug(f"연속 인식 결과 없음, recognize_once() 재시도")
-                            result = speech_recognizer.recognize_once()
+                        if result.reason == speechsdk.ResultReason.RecognizedSpeech:
+                            recognized_text = result.text.strip().replace('.', '')
                             
-                            if result.reason == speechsdk.ResultReason.RecognizedSpeech:
-                                recognized_text = result.text.strip().replace('.', '')
+                            # 빈 문자열이면 실제로는 인식 실패이므로 연속 인식으로 재시도
+                            if recognized_text:
                                 logger.info(f"Azure 인식 성공 ({self.config_name}): \"{recognized_text}\"")
+                                
+                                # 임시 파일 정리
+                                if final_audio_path != audio_path and os.path.exists(final_audio_path):
+                                    try:
+                                        os.unlink(final_audio_path)
+                                    except:
+                                        pass
+                                
                                 return recognized_text
-                            elif result.reason == speechsdk.ResultReason.NoMatch:
-                                logger.warning(f"Azure 인식 실패 ({self.config_name}): 음성을 인식할 수 없음")
-                                return ""
                             else:
-                                logger.warning(f"Azure 인식 실패 ({self.config_name}): {result.reason}")
-                                return ""
+                                # 빈 문자열이면 실패로 처리하고 연속 인식으로 재시도
+                                logger.debug(f"recognize_once()가 빈 문자열 반환, 연속 인식으로 재시도")
+                                should_try_continuous = True
+                        elif result.reason == speechsdk.ResultReason.NoMatch:
+                            # NoMatch인 경우 연속 인식으로 재시도
+                            logger.debug(f"recognize_once() 실패 (NoMatch), 연속 인식으로 재시도")
+                            should_try_continuous = True
+                        else:
+                            # Canceled 등 다른 이유로 실패
+                            logger.debug(f"recognize_once() 실패 ({result.reason}), 연속 인식으로 재시도")
+                            should_try_continuous = True
+                        
+                        # 연속 인식으로 재시도
+                        if should_try_continuous:
+                            # 연속 인식 사용 (더 긴 오디오와 아동 음성에 적합)
+                            all_results = []
+                            done = False
+                            
+                            def recognized_cb(evt):
+                                """인식 성공 이벤트"""
+                                if evt.result.text:
+                                    all_results.append(evt.result.text.strip())
+                            
+                            def canceled_cb(evt):
+                                """취소 이벤트"""
+                                nonlocal done
+                                logger.debug(f"Azure 인식 취소됨 ({self.config_name}): {evt.reason}")
+                                done = True
+                            
+                            def stop_cb(evt):
+                                """중지 이벤트"""
+                                nonlocal done
+                                done = True
+                            
+                            # 이벤트 핸들러 등록
+                            speech_recognizer.recognized.connect(recognized_cb)
+                            speech_recognizer.canceled.connect(canceled_cb)
+                            speech_recognizer.session_stopped.connect(stop_cb)
+                            
+                            # 연속 인식 시작
+                            speech_recognizer.start_continuous_recognition()
+                            
+                            # 최대 30초 대기 (오디오 길이에 따라 조정)
+                            import time
+                            try:
+                                import librosa
+                                audio_duration = librosa.get_duration(path=final_audio_path)
+                                timeout = max(audio_duration * 3, 5.0)  # 오디오 길이의 3배, 최소 5초
+                                timeout = min(timeout, 30.0)  # 최대 30초
+                            except:
+                                timeout = 10.0
+                            
+                            start_time = time.time()
+                            while not done and (time.time() - start_time) < timeout:
+                                time.sleep(0.1)
+                            
+                            # 인식 중지
+                            speech_recognizer.stop_continuous_recognition()
+                            
+                            # 결과 처리
+                            if all_results:
+                                recognized_text = ' '.join(all_results).strip().replace('.', '')
+                                logger.info(f"Azure 인식 성공 ({self.config_name}, 연속인식): \"{recognized_text}\"")
+                                
+                                # 임시 파일 정리
+                                if final_audio_path != audio_path and os.path.exists(final_audio_path):
+                                    try:
+                                        os.unlink(final_audio_path)
+                                    except:
+                                        pass
+                                
+                                return recognized_text
+                            else:
+                                # 임시 파일 정리
+                                if final_audio_path != audio_path and os.path.exists(final_audio_path):
+                                    try:
+                                        os.unlink(final_audio_path)
+                                    except:
+                                        pass
+                                
+                                logger.warning(f"Azure 인식 실패 ({self.config_name}): 음성을 인식할 수 없음")
+                                return ""  # 빈 문자열 반환하여 재시도 유도
+                        else:
+                            # Canceled 등 다른 이유로 실패
+                            logger.debug(f"Azure 인식 실패 ({self.config_name}): {result.reason}")
+                            
+                            # 임시 파일 정리
+                            if final_audio_path != audio_path and os.path.exists(final_audio_path):
+                                try:
+                                    os.unlink(final_audio_path)
+                                except:
+                                    pass
+                            
+                            return ""  # 빈 문자열 반환하여 재시도 유도
                             
                     except Exception as e:
                         logger.error(f"Azure 음성인식 오류 ({self.config_name}): {e}")
@@ -371,6 +541,36 @@ class AzureOptimizationTester:
         # 5. 결과 분석 및 비교
         if all_results:
             self.analyze_results(all_results)
+            
+            # 성공/전체 갯수 통계 출력
+            total_audio_count = len(test_data)
+            total_test_count = len(all_results)
+            
+            # 설정별 성공률 계산
+            print("\n" + "="*60)
+            print("인식 성공률 통계")
+            print("="*60)
+            print(f"전체 오디오 파일 수: {total_audio_count}개")
+            print(f"전체 테스트 수: {total_test_count}개 (설정 수 × 오디오 파일 수)")
+            
+            # 설정별로 성공률 계산
+            for config in configurations:
+                config_name = config['name']
+                config_results = [r for r in all_results if r.get('config_name') == config_name]
+                
+                if config_results:
+                    success_count = sum(1 for r in config_results if r.get('hypothesis_text', '').strip() != '')
+                    total_count = len(config_results)
+                    success_rate = (success_count / total_count * 100) if total_count > 0 else 0.0
+                    
+                    print(f"\n설정: {config_name} ({config['description']})")
+                    print(f"  성공: {success_count}개 / 전체: {total_count}개 ({success_rate:.1f}%)")
+            
+            # 전체 성공률
+            total_success = sum(1 for r in all_results if r.get('hypothesis_text', '').strip() != '')
+            overall_success_rate = (total_success / total_test_count * 100) if total_test_count > 0 else 0.0
+            print(f"\n전체 성공률: {total_success}개 / {total_test_count}개 ({overall_success_rate:.1f}%)")
+            print("="*60)
         else:
             logger.warning("\n=== 테스트 결과가 없습니다 ===")
             logger.warning("Azure Speech Key가 설정되어 있는지 확인하세요.")

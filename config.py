@@ -14,6 +14,13 @@ class Config:
     AZURE_SPEECH_KEY = os.getenv('AZURE_SPEECH_KEY', '')
     AZURE_SPEECH_REGION = os.getenv('AZURE_SPEECH_REGION', 'eastus')
     
+    # Clova Speech API
+    CLOVA_INVOKE_URL = os.getenv('CLOVA_INVOKE_URL', '')
+    CLOVA_SECRET_KEY = os.getenv('CLOVA_SECRET_KEY', '')
+    # 호환성을 위해 기존 변수명도 지원
+    CLOVA_CLIENT_ID = os.getenv('CLOVA_CLIENT_ID', '')
+    CLOVA_CLIENT_SECRET = os.getenv('CLOVA_CLIENT_SECRET', '')
+    
     # OpenAI Whisper API
     OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', '')
     
